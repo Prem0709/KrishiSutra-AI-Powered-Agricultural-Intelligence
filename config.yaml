@@ -1,0 +1,9 @@
+data_gov:
+  api_key: "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
+llm_provider: gemini
+google_api_key: "AIzaSyCdSM2oDPOOe3YfcmFPQY6R3dccjY7Ah2c"   # api_key: "AIzaSyDMvsH4iXumceKygftfDt0ItKyRZIQujOI"
+
+embedding_model: "models/embedding-001"
+embedding_provider: "huggingface"  # Options: "google" or "huggingface"
+huggingface_model: "sentence-transformers/all-MiniLM-L6-v2"
+chat_model: "models/gemini-pro-latest"
