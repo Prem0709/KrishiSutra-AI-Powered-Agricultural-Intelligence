@@ -1,39 +1,42 @@
-# --- Core Framework ---
+# ────────────── Core Web & App ──────────────
 streamlit==1.39.0
 PyYAML==6.0.2
 requests==2.32.3
+
+# ────────────── Data Handling ──────────────
 pandas==2.2.3
-numpy>=1.26.4,<2.0
+numpy==1.26.4
 pyarrow==17.0.0
 openpyxl==3.1.5
 xlrd==2.0.1
+fastparquet==2024.5.0
 
-# --- LangChain + Integrations ---
+# ────────────── LangChain Ecosystem ──────────────
 langchain==0.3.7
-langchain-core>=0.3.27,<0.4.0
+langchain-core==0.3.17
 langchain-community==0.3.7
 langchain-huggingface==0.1.0
-langchain-google-genai==2.0.9
 langchain-openai==0.2.8
+langchain-google-genai==2.0.9
 
-# --- AI + Embeddings ---
-faiss-cpu==1.8.0.post1
+# ────────────── AI / Embeddings / NLP ──────────────
+openai>=1.54.0,<2.0.0
+faiss-cpu==1.12.0
+sentence-transformers==3.1.0
+transformers==4.45.2
+huggingface-hub>=0.25.0
+torch>=2.3.0
 tiktoken==0.8.0
-openai==1.51.0
+
+# ────────────── Google GenAI ──────────────
 google-generativeai==0.8.5
 google-ai-generativelanguage==0.6.15
 
-# --- Transformers / NLP ---
-sentence-transformers==3.2.0
-transformers==4.46.3
-huggingface-hub==0.25.2
-torch==2.5.1
-
-# --- Visualization + Utils ---
+# ────────────── Visualization ──────────────
 matplotlib==3.9.2
 plotly==5.24.1
+
+# ────────────── Utilities ──────────────
 tqdm==4.66.5
 typing-extensions==4.12.2
 python-magic==0.4.27
-fastparquet==2024.11.0
-python-dotenv==1.0.1
