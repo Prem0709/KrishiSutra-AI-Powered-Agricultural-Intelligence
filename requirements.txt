@@ -68,6 +68,7 @@
 
 # Core UI and config
 streamlit==1.36.0
+gradio==4.44.0
 PyYAML==6.0.2
 
 # HTTP/API

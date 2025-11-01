@@ -1,3 +1,15 @@
+---
+title: KrishiSutra AI Powered Agricultural Intelligence
+emoji: 🌾
+colorFrom: green
+colorTo: yellow
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # 🌾 Project Samarth — AI Q&A Assistant (Gemini Powered)
 
 ### Empowering Smart Agriculture using Multi-Agent RAG and Google Gemini

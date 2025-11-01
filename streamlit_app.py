@@ -40,9 +40,17 @@ else:
 # ----------------------------------
 # 2️⃣ Streamlit UI Setup
 # ----------------------------------
-st.set_page_config(page_title="🌾 Project Samarth — Gemini Multi-RAG", layout="wide")
-st.title("🌾 Project Samarth — AI Q&A Assistant (Gemini Powered)")
-st.caption("Empowering Smart Agriculture using Multi-Agent RAG and Google Gemini")
+st.set_page_config(page_title="🌾 Project Samarth", layout="wide")
+
+# Center align the title and subtitle
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.markdown("<h1 style='text-align: center;'>🌾 Project Samarth</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>KrishiSutra AI-Powered Agricultural Intelligence</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'><i>Powered by Gemini + Multi-Agent RAG</i></p>", unsafe_allow_html=True)
+
+# Add a divider
+st.divider()
 
 st.sidebar.header("⚙️ Configuration")
 agent_choice = st.sidebar.selectbox(
@@ -141,10 +149,32 @@ def gemini_answer(prompt, context=""):
 # ----------------------------------
 # 6️⃣ Chat Interface
 # ----------------------------------
-st.markdown("## 💬 Chat with Samarth AI")
-user_query = st.text_input("Ask your question (e.g., 'Compare rainfall and rice yield in Maharashtra')")
 
-if st.button("Submit") and user_query:
+# Initialize chat history in session state if it doesn't exist
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
+
+st.markdown("## 💬 Chat with Samarth AI")
+
+# Chat history display
+for i, (query, response) in enumerate(st.session_state.chat_history):
+    with st.container():
+        # User message
+        st.markdown(f"**You:** {query}")
+        # Assistant response
+        st.markdown(f"**Samarth:** {response}")
+        st.divider()
+
+# Chat input area with clear button
+col1, col2 = st.columns([5,1])
+with col1:
+    user_query = st.text_input("Ask your question (e.g., 'Compare rainfall and rice yield in Maharashtra')")
+with col2:
+    if st.button("Clear Chat"):
+        st.session_state.chat_history = []
+        st.rerun()
+
+if st.button("Submit", type="primary") and user_query:
     with st.spinner("🔎 Analyzing and fetching data..."):
         # Step 1: Auto-select agent
         selected_agent = agent_choice
@@ -171,7 +201,12 @@ if st.button("Submit") and user_query:
 
         # Step 4: Use Gemini to generate final answer
         final_answer = gemini_answer(user_query, context)
-        st.success("✅ Response:")
+        
+        # Add the Q&A pair to chat history
+        st.session_state.chat_history.append((user_query, final_answer))
+        
+        # Show the latest response
+        st.success("✅ Latest Response:")
         st.write(final_answer)
 
 
