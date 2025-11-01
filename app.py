@@ -10,12 +10,18 @@ from agents.kcc_agent import build_kcc_agent
 
 
 # ----------------------------------
-# 1️⃣ Load Configurations
+# 1️⃣ Load Configurations (with env variable support)
 # ----------------------------------
 def load_config():
     config_path = os.path.join(os.path.dirname(__file__), "config.yaml")
     with open(config_path, "r") as f:
-        return yaml.safe_load(f)
+        config = yaml.safe_load(f)
+    
+    # Override with environment variables if available (for HuggingFace Spaces secrets)
+    config["google_api_key"] = os.environ.get("GOOGLE_API_KEY", config.get("google_api_key"))
+    config["data_gov"]["api_key"] = os.environ.get("DATA_GOV_API_KEY", config["data_gov"]["api_key"])
+    
+    return config
 
 config = load_config()
 
@@ -60,7 +66,7 @@ def get_agent(agent_choice, uploaded_file=None):
     elif agent_choice == "🌾 Agriculture Agent":
         agent = build_agriculture_agent(temp_path or "data/Current Daily Price of Various Commodities from Various Markets (Mandi).csv")
     elif agent_choice == "🧾 Scheme Agent":
-        agent = build_scheme_agent(temp_path or "data/GetPMKisanDatagov.json")
+        agent = build_scheme_agent(temp_path or "data/GetPMKIsanDatagov.json")
     elif agent_choice == "☎️ KCC Agent":
         agent = build_kcc_agent(DATA_GOV_API_KEY) if DATA_GOV_API_KEY else None
     else:
