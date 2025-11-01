@@ -8,9 +8,9 @@ pyarrow==17.0.0
 openpyxl==3.1.5
 xlrd==2.0.1
 
-# LangChain ecosystem (stable compatibility)
+# LangChain ecosystem (fixed core dependency)
 langchain==0.3.7
-langchain-core==0.3.14
+langchain-core==0.3.15
 langchain-community==0.3.7
 langchain-huggingface==0.1.0
 langchain-google-genai==2.0.9
