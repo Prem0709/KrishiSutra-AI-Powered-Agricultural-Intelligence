@@ -5,15 +5,15 @@ requests==2.32.3
 pandas==2.2.3
 numpy==2.1.2
 
-# ────────────── LangChain Ecosystem ──────────────
-langchain==1.2.3
-langchain-core==1.2.3
+# ────────────── LangChain Ecosystem (PyPI-verified) ──────────────
+langchain==1.0.3
+langchain-core==1.0.2
 langchain-community==0.3.0
-langchain-huggingface==0.3.0
+langchain-huggingface==0.1.0
 langchain-openai==0.2.2
 langchain-google-genai==1.0.2
 
-# ────────────── AI & NLP ──────────────
+# ────────────── AI / NLP ──────────────
 openai==1.54.3
 huggingface-hub==1.0.1
 transformers==4.46.1
