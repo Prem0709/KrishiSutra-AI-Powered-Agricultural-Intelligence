@@ -1,8 +1,8 @@
 # ────────────── Core Web & App ──────────────
 streamlit==1.39.0
 PyYAML==6.0.2
-requests==2.32.3
-
+requests==2.32.5  # <<< FIX: Updated from 2.32.3 to 2.32.5 to satisfy langchain-community
+# 
 # ────────────── Data Handling ──────────────
 pandas==2.3.3
 numpy==2.3.4
@@ -11,10 +11,10 @@ openpyxl==3.1.5
 xlrd==2.0.1
 fastparquet==2024.5.0
 
-# ────────────── LangChain Ecosystem (Community downgraded to latest available stable version) ──────────────
+# ────────────── LangChain Ecosystem ──────────────
 langchain==1.0.3
 langchain-core==1.0.2
-langchain-community==0.4.1     # <<< FIX: Downgraded to latest available version (0.4.1) 
+langchain-community==0.4.1
 langchain-huggingface==0.1.0
 langchain-openai==1.0.1
 langchain-google-genai==3.0.0
