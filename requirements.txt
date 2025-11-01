@@ -4,34 +4,31 @@ PyYAML==6.0.2
 requests==2.32.3
 
 # ────────────── Data Handling ──────────────
-pandas==2.3.3  # Updated from 2.2.3
-numpy==2.3.4  # Updated from 1.26.4
-pyarrow==22.0.0  # Updated from 17.0.0
+pandas==2.3.3
+numpy==2.3.4
+pyarrow==22.0.0
 openpyxl==3.1.5
 xlrd==2.0.1
 fastparquet==2024.5.0
 
-# ────────────── LangChain Ecosystem ──────────────
-langchain==1.0.3  # Updated from 0.3.7 (Major version update for stability)
-langchain-core==1.0.2  # Updated from 0.3.17 to align with langchain 1.x
-langchain-community==0.3.7
-langchain-huggingface==0.1.0
-langchain-openai==1.0.1  # Updated from 0.2.8 to align with langchain 1.x
-langchain-google-genai==3.0.0  # Updated from 2.0.9 and aligns with langchain 1.x
+# ────────────── LangChain Ecosystem (All updated to v1.x for compatibility) ──────────────
+langchain==1.0.3
+langchain-core==1.0.2
+langchain-community==1.0.2        # <<< IMPORTANT FIX: Updated from 0.3.7 to 1.0.2
+langchain-huggingface==0.1.0      # This version is likely compatible with the new core.
+langchain-openai==1.0.1
+langchain-google-genai==3.0.0
 
 # ────────────── AI / Embeddings / NLP ──────────────
-# openai is now pinned to a compatible version for stability
 openai==1.54.0 
-faiss-cpu==1.12.0  # Updated from 1.8.0.post1 (Resolves Streamlit deployment error)
-sentence-transformers==5.1.2  # Updated from 3.1.0
+faiss-cpu==1.12.0
+sentence-transformers==5.1.2
 transformers==4.45.2
 huggingface-hub>=0.25.0
-torch==2.9.0  # Updated from 2.3.0
+torch==2.9.0
 tiktoken==0.8.0
 
 # ────────────── Google GenAI ──────────────
-# These packages are now managed through langchain-google-genai, 
-# but pinning them ensures stability.
 google-generativeai==0.8.5 
 google-ai-generativelanguage==0.6.15
 
