@@ -11,43 +11,63 @@ Your Samarth AI project is now ready for deployment to Hugging Face Spaces!
 4. ✓ Created .gitignore file
 5. ✓ Committed all changes to git
 6. ✓ Added HuggingFace remote repository
+7. ✓ Pushed to GitHub successfully
 
 
-📋 NEXT STEPS TO DEPLOY:
-------------------------
+📋 DEPLOYMENT STEPS (FOLLOW IN ORDER):
+--------------------------------------
 
-STEP 1: Install Hugging Face CLI (if not already installed)
-   Run in PowerShell:
-   powershell -ExecutionPolicy ByPass -c "irm https://hf.co/cli/install.ps1 | iex"
+STEP 1: Get Your Hugging Face Access Token
+   a. Go to: https://huggingface.co/settings/tokens
+   b. Click "New token" or use an existing one
+   c. Make sure it has "write" access
+   d. Copy the token (starts with "hf_...")
 
 STEP 2: Login to Hugging Face
-   huggingface-cli login
-   (You'll need your HuggingFace access token from https://huggingface.co/settings/tokens)
+   Option A - Using HF CLI (Recommended):
+      First install the CLI:
+      powershell -ExecutionPolicy ByPass -c "irm https://hf.co/cli/install.ps1 | iex"
+      
+      Then login:
+      huggingface-cli login
+      (Paste your token when prompted)
+   
+   Option B - Using Git Credentials:
+      When you push (Step 3), use your token as the password:
+      Username: Premkumar0709
+      Password: <your HF token>
 
 STEP 3: Push to Hugging Face Space
    cd "f:\Bharat Fellowship\samarth"
+   
+   Method 1 - Direct push (if logged in via CLI):
+   git push huggingface main
+   
+   Method 2 - With credentials in URL:
+   git remote remove huggingface
+   git remote add huggingface https://Premkumar0709:<YOUR_HF_TOKEN>@huggingface.co/spaces/Premkumar0709/krishisutra-ai-powered-agricultural-intelligence
+   git push huggingface main
+   
+   If you get "unrelated histories" error:
+   git pull huggingface main --allow-unrelated-histories
    git push huggingface main
 
-   OR if you need to allow unrelated histories:
-   git pull huggingface main --allow-unrelated-histories
-   git push huggingface main --force
 
+⚠️ IMPORTANT - CONFIGURE API KEYS IN HUGGINGFACE:
+--------------------------------------------------
+Your config.yaml contains API keys that will be uploaded to HuggingFace.
+For better security, use HuggingFace Secrets:
 
-⚠️ IMPORTANT - SECURITY NOTES:
-------------------------------
-1. Your config.yaml contains API keys. Hugging Face Spaces needs these!
+1. Go to: https://huggingface.co/spaces/Premkumar0709/krishisutra-ai-powered-agricultural-intelligence/settings
+2. Scroll to "Repository secrets"
+3. Add these secrets:
+   Name: GOOGLE_API_KEY
+   Value: AIzaSyCdSM2oDPOOe3YfcmFPQY6R3dccjY7Ah2c
    
-   Option A (Recommended): Use Hugging Face Secrets
-   - Go to your Space settings: https://huggingface.co/spaces/Premkumar0709/krishisutra-ai-powered-agricultural-intelligence/settings
-   - Add these secrets:
-     * GOOGLE_API_KEY = AIzaSyCdSM2oDPOOe3YfcmFPQY6R3dccjY7Ah2c
-     * DATA_GOV_API_KEY = 579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b
-   
-   Then modify app.py to read from environment variables:
-   
-   Option B: Keep config.yaml (Less secure but simpler)
-   - Current config.yaml will be uploaded with your keys
-   - This is acceptable for public/free APIs, but not recommended for production
+   Name: DATA_GOV_API_KEY
+   Value: 579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b
+
+4. The app.py already supports reading from environment variables!
 
 
 📁 DATA FILES:
