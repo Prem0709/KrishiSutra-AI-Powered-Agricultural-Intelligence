@@ -1,104 +1,58 @@
 # ================================
 # STREAMLIT CLOUD REQUIREMENTS
 # ================================
+# Python Version: 3.13.9
 # Last Updated: 2025-11-01
-# Python Version: 3.13.x
 # All dependencies tested and compatible
 # ================================
 
-# Core UI Framework
+# ================================
+# CORE UI FRAMEWORK
+# ================================
 streamlit==1.39.0
 PyYAML==6.0.2
 
-# HTTP/API Libraries
+# ================================
+# HTTP/API LIBRARIES
+# ================================
 requests==2.32.3
 certifi==2025.10.5
 urllib3==2.5.0
 idna==3.11
 charset-normalizer==3.4.4
 
-# Data Processing
+# ================================
+# DATA PROCESSING
+# ================================
 pandas==2.2.3
 numpy==1.26.4
 pyarrow==15.0.2
 python-dateutil==2.9.0.post0
 pytz==2025.2
 tzdata==2025.2
+six==1.17.0
 
-# LangChain Ecosystem (Pinned compatible versions)
+# ================================
+# LANGCHAIN ECOSYSTEM
+# ================================
 langchain==0.3.7
-langchain-core==0.3.15
+langchain-core==0.3.17
 langchain-community==0.3.7
 langchain-text-splitters==0.3.2
 langchain-huggingface==0.1.0
 langchain-openai==0.2.5
 langchain-google-genai==2.0.4
 
-# LLM Provider APIs
+# ================================
+# LLM PROVIDER APIs
+# ================================
 openai==1.54.4
 google-generativeai==0.8.3
 google-ai-generativelanguage==0.6.15
 
-# HuggingFace Libraries (Compatible versions)
-huggingface-hub==0.26.2
-transformers==4.46.3
-sentence-transformers==3.1.1
-tokenizers==0.20.3
-
-# Vector Database
-faiss-cpu==1.8.0.post1
-
-# Tokenization
-tiktoken==0.8.0
-
-# Visualization Libraries
-plotly==5.24.1
-matplotlib==3.9.2
-
-# Machine Learning
-scikit-learn==1.5.2
-scipy==1.13.1
-joblib==1.4.2
-
-# Database & ORM
-SQLAlchemy==2.0.35
-
-# Data Validation
-pydantic==2.9.2
-pydantic-core==2.23.4
-
-# Async HTTP
-aiohttp==3.10.10
-aiosignal==1.3.2
-frozenlist==1.5.0
-multidict==6.1.0
-yarl==1.18.3
-
-# Utilities
-tqdm==4.66.5
-typing-extensions==4.12.2
-tenacity==9.0.0
-packaging==24.2
-
-# File Format Support
-openpyxl==3.1.5
-xlrd==2.0.1
-et-xmlfile==2.0.0
-
-# JSON & Data Serialization
-jsonpatch==1.33
-jsonpointer==3.0.0
-dataclasses-json==0.6.7
-marshmallow==3.23.2
-
-# API & HTTP Clients
-httpx==0.27.2
-httpcore==1.0.7
-h11==0.14.0
-anyio==4.7.0
-sniffio==1.3.1
-
-# Google API Support
+# ================================
+# GOOGLE API SUPPORT
+# ================================
 google-auth==2.37.0
 google-api-core==2.24.0
 google-api-python-client==2.154.0
@@ -106,15 +60,112 @@ googleapis-common-protos==1.66.0
 proto-plus==1.25.0
 protobuf==5.29.5
 
-# Langsmith (LangChain Monitoring)
-langsmith==0.1.147
+# ================================
+# HUGGINGFACE LIBRARIES
+# ================================
+huggingface-hub==0.26.2
+transformers==4.46.3
+sentence-transformers==3.1.1
+tokenizers==0.20.3
+safetensors==0.5.3
+regex==2024.11.6
+
+# ================================
+# VECTOR DATABASE
+# ================================
+faiss-cpu==1.9.0.post1
+
+# ================================
+# TOKENIZATION
+# ================================
+tiktoken==0.8.0
+
+# ================================
+# VISUALIZATION LIBRARIES
+# ================================
+plotly==5.24.1
+matplotlib==3.9.2
+altair==5.5.0
+
+# ================================
+# MACHINE LEARNING
+# ================================
+scikit-learn==1.5.2
+scipy==1.13.1
+joblib==1.4.2
+sympy==1.13.3
+mpmath==1.3.0
+networkx==3.4.2
+
+# ================================
+# DATABASE & ORM
+# ================================
+SQLAlchemy==2.0.35
+greenlet==3.1.1
+
+# ================================
+# DATA VALIDATION
+# ================================
+pydantic==2.9.2
+pydantic-core==2.23.4
+pydantic-settings==2.6.1
+annotated-types==0.7.0
+
+# ================================
+# ASYNC HTTP
+# ================================
+aiohttp==3.10.10
+aiosignal==1.3.2
+frozenlist==1.5.0
+multidict==6.1.0
+yarl==1.18.3
+async-timeout==4.0.3
+
+# ================================
+# HTTP CLIENTS
+# ================================
+httpx==0.27.2
+httpcore==1.0.7
+h11==0.14.0
+httpx-sse==0.4.0
+
+# ================================
+# UTILITIES
+# ================================
+tqdm==4.66.5
+typing-extensions==4.12.2
+tenacity==9.0.0
+packaging==24.2
+click==8.3.0
+cachetools==5.5.2
+filelock==3.20.0
+fsspec==2025.10.0
+
+# ================================
+# JSON & DATA SERIALIZATION
+# ================================
+jsonpatch==1.33
+jsonpointer==3.0.0
+dataclasses-json==0.6.7
+marshmallow==3.23.2
 orjson==3.10.12
 
-# Streamlit Dependencies
-altair==5.5.0
+# ================================
+# FILE FORMAT SUPPORT
+# ================================
+openpyxl==3.1.5
+xlrd==2.0.1
+et-xmlfile==2.0.0
+
+# ================================
+# LANGSMITH (LangChain Monitoring)
+# ================================
+langsmith==0.1.147
+
+# ================================
+# STREAMLIT DEPENDENCIES
+# ================================
 blinker==1.9.0
-cachetools==5.5.2
-click==8.3.0
 gitpython==3.1.45
 pillow==10.4.0
 pydeck==0.9.1
@@ -123,34 +174,43 @@ toml==0.10.2
 tornado==6.5.2
 watchdog==5.0.3
 
-# Additional Required Dependencies
-filelock==3.20.0
-fsspec==2025.10.0
-regex==2024.11.6
-safetensors==0.5.3
-sympy==1.13.3
-mpmath==1.3.0
-networkx==3.4.2
-
-# Color & Display
+# ================================
+# COLOR & DISPLAY
+# ================================
 colorama==0.4.6
 markdown-it-py==4.0.0
 mdurl==0.1.2
 pygments==2.19.2
 
-# Git Integration
+# ================================
+# GIT INTEGRATION
+# ================================
 gitdb==4.0.12
 smmap==5.0.2
 
-# Cryptography (for Google Auth)
-cachetools==5.5.2
+# ================================
+# CRYPTOGRAPHY (for Google Auth)
+# ================================
 pyasn1==0.6.1
 pyasn1-modules==0.4.1
 rsa==4.9
 
-# Date/Time
-python-dateutil==2.9.0.post0
-six==1.17.0
+# ================================
+# ASYNC & CONCURRENCY
+# ================================
+anyio==4.7.0
+sniffio==1.3.1
 
-# Concurrency
-greenlet==3.1.1
+# ================================
+# ADDITIONAL DEPENDENCIES
+# ================================
+Jinja2==3.1.4
+MarkupSafe==3.0.2
+contourpy==1.3.1
+cycler==0.12.1
+fonttools==4.55.3
+kiwisolver==1.4.7
+pillow==10.4.0
+pyparsing==3.2.1
+threadpoolctl==3.5.0
+wrapt==1.17.2
