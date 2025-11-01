@@ -1,104 +1,117 @@
-# # pandas
-# # numpy
-# # requests
-# # langchain
-# # openai
-# # faiss-cpu
-# # tiktoken
-# # streamlit
-# # pyarrow
-# # openpyxl
-# # zipfile36
+streamlit==1.39.0
+pandas==2.2.3
+>>>>>>> 92a203debeb12602f8d13436a84071de8d3f02ff
+numpy==1.26.4
 
+# LangChain
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-openai==0.2.5
+langchain-google-genai==2.0.4
+langchain-huggingface==0.1.0
 
-# # Core LLM & RAG Frameworks
-# langchain>=0.2.12
-# langchain-community>=0.2.10
-# langchain-core==1.0.2
-# faiss-cpu>=1.8.0
-# openai>=1.12.0
+# LLM APIs
+openai==1.54.4
+google-generativeai==0.8.3
 
-# # langchain
-# langchain-openai
-# # faiss-cpu
-# tiktoken
+# HuggingFace
+huggingface-hub==0.26.2
+transformers==4.46.3
+sentence-transformers==3.1.1
 
+# Vector DB & Utils
+faiss-cpu==1.9.0.post1
+tiktoken==0.8.0
 
-# # Streamlit UI
-# streamlit>=1.36.0
+# Visualization
+plotly==5.24.1
+matplotlib==3.9.2
 
-# # Data Handling & Formats
-# pandas>=2.2.0
-# numpy>=1.26.0
-# pyarrow>=15.0.0
-# openpyxl>=3.1.2
-# xlrd>=2.0.1
-# fastparquet>=2024.2.0
+# Machine Learning (pre-built only)
+scikit-learn==1.5.2
 
-# # File & Config
-# PyYAML>=6.0.2
-# tqdm>=4.66.0
-
-# # API Integration
-# requests>=2.32.0
-
-# # Optional Enhancements (Vector Search, Text Embedding)
-# sentence-transformers>=2.7.0
-# chromadb>=0.5.5
-
-# # For ZIP handling and generic IO
-# python-magic>=0.4.27
-
-# # For Streamlit caching and utils
-# typing-extensions>=4.10.0
-
-# # Visualization (for debugging or dataset exploration)
-# matplotlib>=3.9.0
-# plotly>=5.22.0
-
-# # HuggingFace (for offline embedding models)
-# transformers>=4.41.0
-# huggingface-hub>=0.18.1
-# langchain-huggingface>=0.0.1
-
-# # Google Generative AI (Compatible versions)
-# langchain-google-genai==3.0.0
-# google-generativeai==0.8.5
-# google-ai-generativelanguage==0.6.15
+# File Support
+PyYAML==6.0.2
+requests==2.32.3
+openpyxl==3.1.5
+# Minimal Requirements for HuggingFace Spaces and Streamlit
+# All packages use pre-built wheels (no compilation needed)
 
 # Core UI and config
-streamlit==1.36.0
+streamlit==1.39.0
 gradio==4.44.0
 PyYAML==6.0.2
 
 # HTTP/API
-requests==2.32.0
+requests==2.32.3
 
 # Data handling
-pandas==2.2.2
+pandas==2.2.3
 numpy==1.26.4
-pyarrow==15.0.2
-openpyxl==3.1.2
-xlrd==2.0.1
 
-# LangChain and vector store
-langchain==0.2.12
-langchain-community==0.2.10
-langchain-core==1.0.2
-langchain-openai
-langchain-huggingface>=0.0.1
-langchain-text-splitters>=0.0.1
-langchain-classic>=0.0.1
-faiss-cpu==1.8.0
-openai==1.12.0
+# LangChain
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-openai==0.2.5
+langchain-google-genai==2.0.4
+langchain-huggingface==0.1.0
 
-# Embeddings (HuggingFace)
-sentence-transformers==2.7.0
-transformers==4.41.0
-huggingface-hub==0.18.1
-torch>=2.1.0
+# LLM APIs
+openai==1.54.4
+google-generativeai==0.8.3
 
-# Google Generative AI
-langchain-google-genai==3.0.0
-google-generativeai==0.8.5
-google-ai-generativelanguage==0.6.15
+# HuggingFace
+huggingface-hub==0.26.2
+transformers==4.46.3
+sentence-transformers==3.1.1
+
+# Vector DB & Utils
+faiss-cpu==1.9.0.post1
+tiktoken==0.8.0
+
+# Visualization
+plotly==5.24.1
+matplotlib==3.9.2
+
+# Machine Learning (pre-built only)
+scikit-learn==1.5.2
+
+# File Support
+openpyxl==3.1.5
+=======
+streamlit==1.39.0
+pandas==2.2.3
+>>>>>>> 92a203debeb12602f8d13436a84071de8d3f02ff
+numpy==1.26.4
+
+# LangChain
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-openai==0.2.5
+langchain-google-genai==2.0.4
+langchain-huggingface==0.1.0
+
+# LLM APIs
+openai==1.54.4
+google-generativeai==0.8.3
+
+# HuggingFace
+huggingface-hub==0.26.2
+transformers==4.46.3
+sentence-transformers==3.1.1
+
+# Vector DB & Utils
+faiss-cpu==1.9.0.post1
+tiktoken==0.8.0
+
+# Visualization
+plotly==5.24.1
+matplotlib==3.9.2
+
+# Machine Learning (pre-built only)
+scikit-learn==1.5.2
+
+# File Support
+PyYAML==6.0.2
+requests==2.32.3
+openpyxl==3.1.5
